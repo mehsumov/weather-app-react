@@ -1,0 +1,97 @@
+.weather-frame .current-weather {
+  position: relative;
+}
+.weather-frame .current-weather .title-temp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.weather-frame .current-weather .title-temp .city {
+  font-size: 50px;
+  color: #fff;
+}
+.weather-frame .current-weather .title-temp .temp {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.weather-frame .current-weather .title-temp .temp .main-temp {
+  font-size: 80px;
+  font-weight: 200;
+  line-height: 1;
+}
+.weather-frame .current-weather .title-temp .temp .feels {
+  opacity: 0.6;
+}
+.weather-frame .current-weather .date {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 30px;
+}
+.weather-frame .current-weather .weather-info .info {
+  padding: 8px 0;
+  color: #fff;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+}
+.weather-frame .current-weather .weather-info .info .icon {
+  width: 30px;
+  margin-right: 10px;
+}
+.weather-frame .current-weather .weather-info .info span {
+  font-weight: 100;
+}
+.weather-frame .current-weather .current-weather-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.weather-frame .current-weather .current-weather-img img {
+  width: 200px;
+}
+
+/* 5 days forecast */
+
+.weather-frame .days {
+  margin-top: 50px;
+
+}
+
+
+.weather-frame .days .day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 30px;
+}
+.weather-frame .days .day .weather-img {
+  width: 100px;
+}
+
+.weather-frame .days .day .date {
+  display: block;
+  margin-top: 15px;
+  font-size: 27px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.weather-frame .days .day .temp{
+    color: #fff;
+    font-size: 24px;
+}
