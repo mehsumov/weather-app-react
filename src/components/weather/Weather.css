@@ -56,7 +56,7 @@
   -o-transform: translate(-50%, -50%);
 }
 .weather-frame .current-weather .current-weather-img img {
-  width: 200px;
+  width: 330px;
 }
 
 /* 5 days forecast */
@@ -65,14 +65,15 @@
   margin-top: 50px;
 
 }
-
+.weather-frame .days .day-wrapper{
+  padding:0 10px;
+}
 
 .weather-frame .days .day {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
