@@ -1,10 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import "./Weather.css"
 const CurrentWeather = () => {
+  const weatherMainData = useSelector(state=>state.weatherDataReducer)
+  const loader = useSelector(state=>state.loaderReducer)
+  console.log(loader);
+  console.log(weatherMainData);
   return (
     <div className="current-weather">
         <div className="title-temp">
-          <span className="city">Baku</span>
+          <span className="city">{weatherMainData.city.name}</span>
           <div className="temp">
              <span className="main-temp">20 °C</span>
              <span className="feels">Feels like: 17 °C</span>

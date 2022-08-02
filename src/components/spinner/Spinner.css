@@ -1,0 +1,9 @@
+.spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner img{
+    clip-path: circle(112.6px at 48.2% 50%);
+}
