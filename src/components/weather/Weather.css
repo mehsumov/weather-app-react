@@ -29,7 +29,13 @@
   color: #fff;
   font-weight: 300;
   display: block;
+
+}
+.weather-frame .current-weather .clock{
+  display: block;
   margin-bottom: 30px;
+  color: #fff;
+  font-size: 23px;
 }
 .weather-frame .current-weather .weather-info .info {
   padding: 8px 0;
@@ -47,13 +53,21 @@
 }
 .weather-frame .current-weather .current-weather-img {
   position: absolute;
-  top: 50%;
+  top: 63%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+.weather-frame .current-weather .current-weather-img .weather-desc{
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 .weather-frame .current-weather .current-weather-img img {
   width: 330px;
@@ -77,8 +91,12 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 3px solid rgba(255, 255, 255, 0.18);
   padding: 30px;
+  cursor: pointer;
+}
+.weather-frame .days .day.active{
+  border-color: #fff;
 }
 .weather-frame .days .day .weather-img {
   width: 100px;
@@ -91,7 +109,13 @@
   font-weight: 100;
   color: #fff;
 }
-
+.weather-frame .days .day .clock{
+  display: block;
+  color: #fff;
+  font-size: 23px;
+  margin: 10px 0;
+  opacity: .7;
+}
 .weather-frame .days .day .temp{
     color: #fff;
     font-size: 24px;

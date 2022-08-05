@@ -1,99 +1,23 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Slider from "react-slick";
+import Day from "./Day";
 const WeatherOfDays = () => {
   let settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3.5,
+    slidesToScroll:3,
     arrows: false,
   };
+    const weatherMainData = useSelector((state) => state.weatherDataReducer);
+    console.log(weatherMainData);
   return (
     <Slider className="days" {...settings}>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
-      <div className="day-wrapper">
-        <div className="day">
-          <img src="./img/09d.png" alt="" className="weather-img" />
-          <span className="date">25 May</span>
-          <span className="temp">28 °C</span>
-        </div>
-      </div>
+      {weatherMainData.list.map((weather) => (
+        <Day icon={weather.weather[0].icon} weather={weather} key={weather.dt} />
+      ))}
     </Slider>
   );
 };

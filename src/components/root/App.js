@@ -5,7 +5,8 @@ import { usePosition } from "use-position";
 import { Container } from "reactstrap";
 import Main from "../main/Main";
 import "./App.css";
-import { hideLoader } from "../../redux/actions/loaderActions";
+import Searchbar from "../searchbar/Searchbar";
+
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <Container>
       <div className="main-box">
+        <Searchbar/>
         <Main />
       </div>
     </Container>

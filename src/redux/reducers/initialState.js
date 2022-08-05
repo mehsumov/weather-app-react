@@ -1,6 +1,6 @@
 const initialState = {
   weatherData: {},
-  currentDay:{},
+  currentDay:{test:"ttest"},
   loader:true
 };
 
