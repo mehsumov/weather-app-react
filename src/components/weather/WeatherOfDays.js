@@ -8,11 +8,34 @@ const WeatherOfDays = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 3.5,
-    slidesToScroll:3,
+    slidesToScroll: 3,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
     const weatherMainData = useSelector((state) => state.weatherDataReducer);
-    console.log(weatherMainData);
+
   return (
     <Slider className="days" {...settings}>
       {weatherMainData.list.map((weather) => (

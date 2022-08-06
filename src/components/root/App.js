@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+
 import * as weatherActions from "../../redux/actions/weatherActions";
 import { usePosition } from "use-position";
 import { Container } from "reactstrap";
@@ -11,6 +12,7 @@ import Searchbar from "../searchbar/Searchbar";
 const App = () => {
   const dispatch = useDispatch();
   const { latitude, longitude } = usePosition();
+
   useEffect(() => {
     latitude &&
       longitude &&

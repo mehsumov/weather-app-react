@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  column-gap: 30px;
 }
 
 .weather-frame .current-weather .title-temp .city {
@@ -119,4 +120,40 @@
 .weather-frame .days .day .temp{
     color: #fff;
     font-size: 24px;
+}
+
+@media (max-width:992px){
+  .weather-frame .current-weather .current-weather-img img{
+    width: 270px;
+  }
+}
+
+@media (max-width:768px){
+  .weather-frame .current-weather .current-weather-img{
+    position: static;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weather-frame .current-weather .weather-info {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+}
+
+@media (max-width:576px){
+  .weather-frame .current-weather .title-temp .city{
+    font-size: 40px;
+  }
+  .weather-frame .current-weather .current-weather-img img{
+    width: 200px;
+  }
 }

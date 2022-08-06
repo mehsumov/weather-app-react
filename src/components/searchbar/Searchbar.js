@@ -1,14 +1,26 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as weatherActions from "../../redux/actions/weatherActions"
+import { useSelector } from "react-redux";
 import "./Searchbar.css"
 import { FiSearch } from "react-icons/fi";
 import { useDispatch } from 'react-redux';
 
 const Searchbar = () => {
+
+  const weatherMainData = useSelector((state) => state.weatherDataReducer);
+  
   const inputElement = useRef()
+    useEffect(() => {
+      inputElement.current.value=""
+    },[weatherMainData]);
   const dispatch = useDispatch()
   const handleSubmit=(e)=>{
-    dispatch(weatherActions.getWeatherData(null,null,inputElement.current.value));
+    if(inputElement.current.value!==""){
+          dispatch(weatherActions.getWeatherData(null,null,inputElement.current.value));
+    }else{
+      alert('Write city name please')
+    }
+
     e.preventDefault()
   }
   return (
